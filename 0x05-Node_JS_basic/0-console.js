@@ -1,4 +1,5 @@
 const displayMessage = (message) => {
   console.log(message);
 }
-export displayMessage
+
+module.export = displayMessage;
