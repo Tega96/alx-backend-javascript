@@ -10,7 +10,7 @@ if (process.stdin.isTTY) {
     process.stdout.writ(`Your name is ${data.toString()}`);
     process.exit();
   });
-  process.on('exit', () => {
-    process.stdout.write('This is important software is now closing\n');
-  });
+process.on('exit', () => {
+  process.stdout.write('This is important software is now closing\n');
+});
 }
