@@ -7,10 +7,10 @@ if (process.stdin.isTTY) {
 });
 } else {
   process.stdin.on('data', (data) => {
-    process.stdout.writ(`Your name is ${data.toString()}`);
+    process.stdout.write(`Your name is ${data.toString()}`);
     process.exit();
   });
-process.on('exit', () => {
-  process.stdout.write('This is important software is now closing\n');
-});
+  process.on('exit', () => {
+    process.stdout.write('This is important software is now closing\n');
+  });
 }
