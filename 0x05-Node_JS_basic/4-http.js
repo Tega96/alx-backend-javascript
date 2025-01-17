@@ -1,14 +1,22 @@
+// A small HTTP server
+
 const http = require('http');
 
-const host = '127.0.0.1';
-const port = 1245;
+const PORT = 1245;
+const HOST = 'localhost';
+const app = http.createServer();
 
-const app = http.createServer((req, res) => {
-  res.statusCode = 200;
+app.on('request', (_, res) => {
+  const responseText = 'Hello ALX!';
+
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello ALX!');
+  res.setHeader('Content-Length', responseText.length);
+  res.statusCode = 200;
+  res.write(Buffer.from(responseText));
 });
 
-app.listen(port, host, () => {});
+app.listen(PORT, HOST, () => {
+  process.stdout.write(`Server listening at -> http://${HOST}:${PORT}\n`);
+});
 
 module.exports = app;
