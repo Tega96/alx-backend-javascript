@@ -1,7 +1,7 @@
 const assert = require('assert');
 const calculateNumber = require('./1-calcul');
 
-describe('CalculateNumber() with type SUM', () => {
+describe('calculateNumber() with type SUM', () => {
   it('add 5 and 10', () => {
     assert.equal(calculateNumber('SUM', 5, 10), 15);
   });
@@ -14,8 +14,8 @@ describe('CalculateNumber() with type SUM', () => {
   it('add 1.7 and 3.5', () => {
     assert.equal(calculateNumber('SUM', 1.7, 3.5), 6);
   });
-  it('should return 0 when addin 0.3 and 0.1', () => {
-    assert.equal(calculateNumber('SUM', 0.3, 0.1) 0);
+  it('should return 0 when addin 0.1 and 0.3', () => {
+    assert.equal(calculateNumber('SUM', 0.1, 0.3) 0);
   });
   it('add -0.7 and 0.7', () => {
     assert.equal(calculateNumber('SUM', -0.7, 0.7) 0);
@@ -83,5 +83,4 @@ describe('#calculateNumber() with type DIVIDE', () => {
   it('divide -88.5 and -3.6', () => {
     assert.equal(calculateNumber('DIVIDE', -88.5, -3.6), 22);
   });
-});
 });
