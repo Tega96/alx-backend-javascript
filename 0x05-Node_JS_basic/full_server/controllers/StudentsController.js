@@ -1,12 +1,9 @@
 import readDatabase from '../utils';
 
-/**
- * The list of all supported majors.
- */
 const VALID_MAJORS = ['CS', 'SWE'];
 
 /**
- * Contains the student-related route handlers.
+ * Contains route handlers.
  */
 class StudentsController {
   static getAllStudents(request, response) {
