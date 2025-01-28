@@ -1,19 +1,20 @@
 function calculateNumber(type, a, b) {
-  const round_a = Math.round(a);
-  const round_b = Math.round(b);
+  const rA = Math.round(a)
+  const rB = Math.round(b)
 
-  if (type === 'SUM')
-    return round_a + round_b;
-  if (type === 'SUBTRACT') {
-    return round_a - round_b;
-  }
-  if (type === 'DIVIDE') {
-    if (round_b === 0) {
+
+  if (type === 'SUM') {
+    return rA + rB;
+  } else if (type === 'SUBTRACT') {
+    return rA - rB;
+  } else if (type === 'DIVIDE') {
+    if (rB === 0) {
       return 'Error';
     }
-    return round_a / round_b;
+    return rA / rB;
+  } else {
+    throw  new Error('Invalid type');
   }
-  
 }
 
 module.exports = calculateNumber;
